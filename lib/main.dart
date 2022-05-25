@@ -1,4 +1,6 @@
+import 'dart:html';
 import 'package:flutter/material.dart';
+import 'package:orgame_app/pages/_homePage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,24 +13,24 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'OrGames',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const HomePage(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
+class Home extends StatefulWidget {
+  const Home({Key? key, required this.title}) : super(key: key);
   final String title;
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<Home> createState() => _HomeState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _HomeState extends State<Home> {
   int _counter = 0;
 
   void _incrementCounter() {
@@ -41,7 +43,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: const Text("Organize your game collection"),
       ),
       body: Center(
         child: Column(
@@ -62,6 +64,57 @@ class _MyHomePageState extends State<MyHomePage> {
         tooltip: 'Increment',
         child: const Icon(Icons.add),
       ),
+    );
+  }
+
+  GridView _gridConsoles() {
+    return GridView.builder(
+        gridDelegate:
+            const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+        itemCount: 4,
+        itemBuilder: (context, index) {
+          return ListTile(
+            title: Row(
+              children: const [
+                Text("Nome bagulho"),
+              ],
+            ),
+          );
+        });
+  }
+
+  Widget _listConsoles() {
+    return ListView(
+      children: [
+        _myImage("Mega Drive", "assets/images/echo.jpg"),
+        _myImage("Master System", "assets/images/smartwatch.jpg"),
+        _myImage("Nintendo", "assets/images/smarttv.jpg"),
+        _myImage("Super Nintendo", "assets/images/smartphone.jpg")
+      ],
+    );
+  }
+
+  Widget _listGames() {
+    return ListView(
+      children: [
+        _myImage("Echo Dot", "assets/images/echo.jpg"),
+        _myImage("Smart Watch", "assets/images/smartwatch.jpg"),
+        _myImage("Smart TV", "assets/images/smarttv.jpg"),
+        _myImage("Smart Phone", "assets/images/smartphone.jpg")
+      ],
+    );
+  }
+
+  Widget _myImage(nome, path) {
+    return Column(
+      children: [
+        Image.asset(path, width: 200, height: 200, fit: BoxFit.contain),
+        Text(
+          "$nome",
+          style: const TextStyle(
+              backgroundColor: Colors.grey, color: Colors.white),
+        )
+      ],
     );
   }
 }
