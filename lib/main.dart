@@ -1,6 +1,6 @@
 import 'dart:html';
 import 'package:flutter/material.dart';
-import 'package:orgame_app/pages/_homePage.dart';
+import 'package:orgame_app/pages/homePage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -76,7 +76,7 @@ class _HomeState extends State<Home> {
           return ListTile(
             title: Row(
               children: const [
-                Text("Nome bagulho"),
+                Text("Nome console"),
               ],
             ),
           );
