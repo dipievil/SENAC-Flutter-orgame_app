@@ -8,7 +8,7 @@ class GamesPage extends StatelessWidget {
     return Container(
         color: Colors.orange,
         child: const Center(
-          child: Text("Consoles"),
+          child: Text("Games"),
         ));
   }
 }
