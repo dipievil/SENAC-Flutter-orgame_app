@@ -20,16 +20,13 @@ class GamesPage extends StatelessWidget {
     return ListView(
       children: [
         _gameDetail("Allex Kidd In Miracle World", imagePath + "alexkidd.jpg",
-            context, const GameDetailPage()),
+            context, GameDetailPage()),
         _gameDetail("Castlevania X", imagePath + "castlevania-draculax.jpg",
-            context, const GameDetailPage()),
+            context, GameDetailPage()),
         _gameDetail("Castlevania", imagePath + "Castlevania.png", context,
-            const GameDetailPage()),
-        _gameDetail(
-            "CastlevaniaBlodlines",
-            imagePath + "CastlevaniaBloodlines.png",
-            context,
-            const GameDetailPage())
+            GameDetailPage()),
+        _gameDetail("CastlevaniaBlodlines",
+            imagePath + "CastlevaniaBloodlines.png", context, GameDetailPage())
       ],
     );
   }
