@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:orgame_app/pages/consolesPage.dart';
-import 'package:orgame_app/pages/gamesPage.dart';
+import 'package:orgame_app/pages/console_list_page.dart';
+import 'package:orgame_app/pages/games_list_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
