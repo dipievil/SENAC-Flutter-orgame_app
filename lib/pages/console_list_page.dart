@@ -19,11 +19,10 @@ class ConsolesPage extends StatelessWidget {
   Widget _listConsoles() {
     return ListView(
       children: [
-        _assetDetail("Allex Kidd In Miracle World", imagePath + "alexkidd.jpg"),
-        _assetDetail("Castlevania X", imagePath + "castlevania-draculax.jpg"),
-        _assetDetail("Castlevania", imagePath + "Castlevania.png"),
-        _assetDetail(
-            "CastlevaniaBlodlines", imagePath + "CastlevaniaBloodlines.png")
+        _assetDetail("Master System", imagePath + "mastersystem.jpg"),
+        _assetDetail("Mega Drive", imagePath + "megadrive.jpg"),
+        _assetDetail("Nintendo", imagePath + "nes.jpg"),
+        _assetDetail("Super Nintendo", imagePath + "supernintendo.jpg")
       ],
     );
   }
