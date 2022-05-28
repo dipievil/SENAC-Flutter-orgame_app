@@ -1,25 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:orgame_app/model/game.dart'
 
 class GameDetailPage extends StatelessWidget {
-  const GameDetailPage({Key? key}) : super(key: key);
+   GameDetailPage({Key? key}) : super(key: key);
 
   static const imagePath = "assets/images/games/";
 
-  final console = 'Master System';
-  final year = '1986';
-  final genre = 'Plataforma';
-  final designer = 'Kotaro Hayashida';
-  final developer = 'Sega';
+  var alexKidd = Game(1,
+  "Alex Kidd In Miracle World","Master System",
+  "1986","Plataforma","Kotaro Hayashida","Sega","alexkidd.jpg");
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Alex Kidd In Miracle World"),
+        title: Text(alexKidd.name),
       ),
       body: Column(
         children: [
-          Image.asset(imagePath + "alexkidd.jpg", fit: BoxFit.contain),
+          Image.asset(imagePath + alexKidd.imageFile, fit: BoxFit.contain),
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: _showTable(),
@@ -50,7 +49,7 @@ class GameDetailPage extends StatelessWidget {
             padding: const EdgeInsets.all(8.0),
             child: TableCell(
                 verticalAlignment: TableCellVerticalAlignment.top,
-                child: Text(console)),
+                child: Text(alexKidd.)),
           ),
         ]),
         TableRow(children: <Widget>[
@@ -64,7 +63,7 @@ class GameDetailPage extends StatelessWidget {
             padding: const EdgeInsets.all(8.0),
             child: TableCell(
                 verticalAlignment: TableCellVerticalAlignment.top,
-                child: Text(year)),
+                child: Text(alexKidd.year)),
           ),
         ]),
         TableRow(
@@ -79,7 +78,7 @@ class GameDetailPage extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: TableCell(
                   verticalAlignment: TableCellVerticalAlignment.top,
-                  child: Text(genre)),
+                  child: Text(alexKidd.genre)),
             ),
           ],
         ),
@@ -95,7 +94,7 @@ class GameDetailPage extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: TableCell(
                   verticalAlignment: TableCellVerticalAlignment.top,
-                  child: Text(designer)),
+                  child: Text(alexKidd.designer)),
             ),
           ],
         ),
@@ -111,7 +110,7 @@ class GameDetailPage extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: TableCell(
                   verticalAlignment: TableCellVerticalAlignment.top,
-                  child: Text(developer)),
+                  child: Text(alexKidd.developer)),
             ),
           ],
         )
