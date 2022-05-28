@@ -9,6 +9,7 @@ class GameDetailPage extends StatelessWidget {
   final year = '1986';
   final genre = 'Plataforma';
   final designer = 'Kotaro Hayashida';
+  final developer = 'Sega';
 
   @override
   Widget build(BuildContext context) {
@@ -18,9 +19,11 @@ class GameDetailPage extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Image.asset(imagePath + "alexkidd.jpg",
-              width: 100, height: 100, fit: BoxFit.contain),
-          _showTable()
+          Image.asset(imagePath + "alexkidd.jpg", fit: BoxFit.contain),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: _showTable(),
+          )
         ],
       ),
     );
@@ -93,6 +96,22 @@ class GameDetailPage extends StatelessWidget {
               child: TableCell(
                   verticalAlignment: TableCellVerticalAlignment.top,
                   child: Text(designer)),
+            ),
+          ],
+        ),
+        TableRow(
+          children: <Widget>[
+            const Padding(
+              padding: EdgeInsets.all(8.0),
+              child: TableCell(
+                  verticalAlignment: TableCellVerticalAlignment.top,
+                  child: Text("Desenvolvedora:")),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: TableCell(
+                  verticalAlignment: TableCellVerticalAlignment.top,
+                  child: Text(developer)),
             ),
           ],
         )
