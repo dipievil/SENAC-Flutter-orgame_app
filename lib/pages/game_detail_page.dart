@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:orgame_app/model/game.dart'
+import 'package:orgame_app/model/game.dart';
 
 class GameDetailPage extends StatelessWidget {
    GameDetailPage({Key? key}) : super(key: key);
