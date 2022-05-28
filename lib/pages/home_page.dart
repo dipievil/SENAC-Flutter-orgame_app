@@ -31,27 +31,18 @@ class HomePage extends StatelessWidget {
   SizedBox showHomeBox(
       BuildContext context, String image, String label, StatelessWidget page) {
     return SizedBox(
-      child: FractionallySizedBox(
-        heightFactor: 0.9,
-        widthFactor: 0.9,
-        alignment: FractionalOffset.center,
-        child: Container(
-            alignment: Alignment.center,
+        child: GestureDetector(
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (BuildContext context) => page));
+            },
             child: Column(
               children: [
-                GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (BuildContext context) => page));
-                  },
-                  child: Image.asset(imagePath + image, fit: BoxFit.fill),
-                ),
-                Text(label)
+                Expanded(
+                    child:
+                        Image.asset(imagePath + image, fit: BoxFit.fitWidth)),
+                Expanded(child: Text(label))
               ],
-            )),
-      ),
-    );
+            )));
   }
 }
