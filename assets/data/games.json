@@ -1,0 +1,12 @@
+[
+   {
+    "id":1,
+    "name": "Alex Kidd In Miracle World",
+    "console": "Master System",
+    "year":"1986",
+    "genre": "Plataforma",
+    "designer":"Kotaro Hayashida",
+    "developer":"Sega",
+    "imageFile":"alexkidd.jpg"
+    }
+]
