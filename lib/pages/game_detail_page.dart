@@ -2,13 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:orgame_app/model/game_model.dart';
 
 class GameDetailPage extends StatelessWidget {
-   GameDetailPage({Key? key}) : super(key: key);
+  GameDetailPage({Key? key}) : super(key: key);
 
   static const imagePath = "assets/images/games/";
 
-  var alexKidd = GameModel(1,
-  "Alex Kidd In Miracle World","Master System",
-  "1986","Plataforma","Kotaro Hayashida","Sega","alexkidd.jpg");
+  var alexKidd = GameModel(1, "Alex Kidd In Miracle World", "Master System",
+      "1986", "Plataforma", "Kotaro Hayashida", "Sega", "alexkidd.jpg");
 
   @override
   Widget build(BuildContext context) {
@@ -49,7 +48,7 @@ class GameDetailPage extends StatelessWidget {
             padding: const EdgeInsets.all(8.0),
             child: TableCell(
                 verticalAlignment: TableCellVerticalAlignment.top,
-                child: Text(alexKidd.)),
+                child: Text(alexKidd.console)),
           ),
         ]),
         TableRow(children: <Widget>[
